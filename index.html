@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toggle Code Visibility</title>
+    <title>Love Letter</title>
     <style>
         
 
@@ -350,7 +350,7 @@ canvas{
 
     
     <div class="toggle-container" id="toggle-container">
-        <h1>দয়া করে এটি টিপুন</h1><br/><br/>
+        <h1>দয়া করে এটি টিপুন <div id="timer">10</div></h1><br/><br/>
         <label class="toggle-label" for="toggleSwitch"></label>
         <label class="toggle-switch">
             <input id="toggleSwitch" type="checkbox">
@@ -454,6 +454,27 @@ canvas{
 
     </div>
 
+
+
+    <script>
+        let timeLeft = 5;
+        const timerElement = document.getElementById('timer');
+    
+        const countdown = setInterval(() => {
+          timeLeft--;
+          timerElement.textContent = timeLeft;
+    
+          if (timeLeft <= 0) {
+            clearInterval(countdown);
+            timerElement.textContent = "Time's Up!";
+          }
+        }, 1000);
+      </script>
+
+
+
+
+    
     <script>
         // References to elements
         const toggleSwitch = document.getElementById('toggleSwitch');
