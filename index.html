@@ -8,6 +8,43 @@
     <title>Love Letter</title>
     <style>
         
+  
+        .containers {
+            position: relative;
+            width: 100%;
+            
+            margin: 0px auto;
+        }
+        .imagess {
+            width: 100%;
+           
+        }
+        .quote-box {
+            position: absolute;
+            top: 40%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            color: #333;
+            border: 10px double white;
+            width :30%;
+        }
+        .quote-box h2 {
+            font-size: 1.8vw;
+            line-height: 1.5;
+            color: black;
+        }
+        .quote-mark {
+            color: red;
+            font-size: 6.4vw;
+        }
+
+
+
 
 
         body {
@@ -350,20 +387,39 @@ canvas{
 </head>
 <body>
 
-    
-    <div class="toggle-container" id="toggle-container">
-        <h1>দয়া করে এটি টিপুন <div id="timer">10</div></h1><br/><br/>
+ <div class="toggle-container" id="toggle-container">
+        
+        <div class="containers">
+            <img src="https://t4.ftcdn.net/jpg/06/30/90/99/360_F_630909929_xHWmhNMPob3F5JDJE9Cfdjg6d80WBv6S.jpg" alt="Krishna Playing Flute" class="imagess">
+            <div class="quote-box">
+                <span class="quote-mark">“</span>
+                <h2>
+                    তোমার কর্ম ও উদ্দেশ্য যদি সঠিক হয়, তাহলে<br>
+                    পৃথিবীর সমস্ত মানুষ তোমার বিপক্ষে থাকলেও<br>
+                    জানবে ঈশ্বর তোমার পক্ষে আছে।
+                </h2>
+                <span class="quote-mark">”</span>
+
+                
+       
+
         <label class="toggle-label" for="toggleSwitch"></label>
         <label class="toggle-switch">
             <input id="toggleSwitch" type="checkbox">
             <span class="slider"></span>
         </label>
 
+            </div>
+
+
+        </div>
+
         
     </div>
 
     <div id="content-wrapper">
        
+
 
 
 
