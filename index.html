@@ -584,7 +584,7 @@ canvas{
     const signatures = ['ইতি তোমার ভালোবাসার,', '19-1-25-1-14'];
     var x = 0;
     var y = 0;
-    const speed = 100;
+    const speed = 10;
 
 
     let a = 0, b =0;
@@ -714,8 +714,8 @@ function yesButton() {
         letterContainer.innerHTML = `
         <h4 style=" color: white; text-align: center;"> ভিডিওটা পুরোটা দেখ </h4>
             <div style="position: relative; width: 100%; height: 100%; border-radius: 10px; overflow: hidden;">
-                <video id="playbackVideo" preload="auto" autoplay style="width: 100%; height: 100%; object-fit: cover;">
-                    <source src="http://idoxa7z.sufydely.com/18b2c63a-5ead-421f-a996-c69a7e96bab4.mp4" type="video/mp4">
+                <video id="playbackVideo" preload="auto" controls autoplay style="width: 100%; height: 100%; object-fit: cover;">
+                    <source src="https://idoxa7z.sufydely.com/18b2c63a-5ead-421f-a996-c69a7e96bab4.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div id="overlayText" style=" color: white; font-size: 1em; display: none; text-align: center;">
@@ -737,6 +737,7 @@ function yesButton() {
             if (video.currentTime >= video.duration / 2) {
                 overlayText.style.display = 'block';
                 
+                
             } else if (video.currentTime >= video.duration / 3) {
                 startFallingImages(fallingContainer);
             }
@@ -744,8 +745,11 @@ function yesButton() {
 
         // On video end, clear video and show paragraphs
         video.onended = function () {
-            letterContainer.innerHTML = ''; // Clear video content
-            revealParagraphs(); // Start revealing paragraphs
+           letterContainer.innerHTML = ''; // Clear video content
+       revealParagraphs(); // Start revealing paragraphs
+           
+
+           
             
         };
     }
@@ -754,8 +758,9 @@ function yesButton() {
         var audio = document.getElementById("audio");
         audio.volume = 0.9;
         audio.play();
-        falling();
-        
+      //  falling();
+       
+
         const letterContainer = document.querySelector('.letter-container');
         let i = 0;
         function typeParagraph() {
@@ -837,7 +842,7 @@ canvas.height = window.innerHeight;
 
 // object image
 var image = new Image();
-image.src = 'http://idoxa7z.sufydely.com/bars-min.PNG';
+image.src = 'https://idoxa7z.sufydely.com/bars-min.PNG';
  
 
 for (var i = 0; i < thingsCount; i++) {
@@ -964,7 +969,9 @@ function tick() {
 
 tick();
     }
-    }
+
+   
+   
 </script>
 
 
